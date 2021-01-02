@@ -8,9 +8,6 @@ Vue.use(VueRouter)
  */
 export const menus = [
   require('./routers/home').default,
-  require('./routers/device').default,
-  require('./routers/statistics').default,
-
   require('./routers/test').default,
 ]
 
@@ -19,7 +16,6 @@ export const menus = [
  */
 const publics = [
   require('./routers/signin').default,
-  require('./routers/mp').default
 ]
 
 const routes = [{
