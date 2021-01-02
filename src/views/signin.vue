@@ -48,13 +48,6 @@
               <button type="submit" class="btn btn-primary btn-block" :disabled="!username || !password" >登录</button>
             </div>
           </form>
-
-          <p class="mb-0">
-            技术支持: 浙江贝尔技术有限公司
-          </p>
-          <p class="mb-0">
-            浙ICP备2020037373号
-          </p>
         </div>
         <!-- /.login-card-body -->
       </div>

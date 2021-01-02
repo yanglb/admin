@@ -3,7 +3,7 @@ export default {
   name: '/home',
   component: () => import('@/views/home/dashboard'),
   meta: {
-    title: '设备信息状态',
+    title: '首页',
     icon: 'nav-icon fas fa-tachometer-alt',
     badge: '新'
   }
