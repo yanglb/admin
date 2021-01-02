@@ -8,6 +8,7 @@ Vue.use(VueRouter)
  */
 export const menus = [
   require('./routers/home').default,
+  require('./routers/order').default,
   require('./routers/article').default,
   require('./routers/test').default,
 ]

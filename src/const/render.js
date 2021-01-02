@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { OrderAfterSaleEnum } from './order'
 
 export const yesno = value =>  value ? '是' : '否'
 export const normalAbnormal = value => !value ? '正常' : '异常'
@@ -27,11 +28,18 @@ export const dateFormat = value => {
     return moment(value).format('YYYY/M/D')
 }
 
-/**
- * 电流转换  mA => A  最多保留2位小数
- */
-export const currentMA2A = value => {
-    if (typeof value === undefined || value == null) return;
-
-    return value / 1000
+export const afterSaleStatus = value => {
+    switch (value) {
+        case OrderAfterSaleEnum.NotApplied:
+            return '未申请'
+        case OrderAfterSaleEnum.Applied:
+            return '申请中'
+        case OrderAfterSaleEnum.Refunded:
+            return '已退款'
+        case OrderAfterSaleEnum.Refuse:
+            return '已拒绝'
+    
+        default:
+            return '未知'
+    }
 }
