@@ -144,6 +144,7 @@ export default {
       this.dialogFormVisible = false
       await afterSaleConfirm(this.dialogForm.order.number, { accept, review: this.dialogForm.review})
       this.$message.success('保存成功')
+      await this.loadData()
     },
     ...{ dateTimeFormat, afterSaleStatus }
   },
