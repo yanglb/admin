@@ -73,16 +73,29 @@
             label="操作">
             <template slot-scope="scope">
               <el-button @click="handleClick(scope.row)" v-if="scope.row.afterSaleStatus == OrderAfterSaleEnum.Applied" type="text" size="small">处理</el-button>
+              <p v-else>{{scope.row.afterSaleReview}}</p>
             </template>
           </el-table-column>
         </el-table>
       </div>
     </div>
+
+    <el-dialog title="退款处理" :visible.sync="dialogFormVisible">
+      <el-form :model="dialogForm">
+        <el-form-item label="处理意见" label-width="120px">
+          <el-input v-model="dialogForm.review" autocomplete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="confirmOrder(false)">拒 绝</el-button>
+        <el-button type="primary" @click="confirmOrder(true)">退 款</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
-import { orderList } from '@/api/order'
+import { afterSaleConfirm, orderList } from '@/api/order'
 import { dateTimeFormat, afterSaleStatus } from '@/const/render'
 import { OrderAfterSaleEnum } from '@/const/order'
 
@@ -95,6 +108,11 @@ export default {
         number: '',
         nickName: ''
       },
+      dialogForm: {
+        review: '',
+        order: null
+      },
+      dialogFormVisible: false,
       OrderAfterSaleEnum
     }
   },
@@ -117,6 +135,15 @@ export default {
     },
     handleClick(order) {
       console.log(order)
+      this.dialogForm.order = order
+      this.dialogForm.review = ''
+
+      this.dialogFormVisible = true
+    },
+    async confirmOrder(accept) {
+      this.dialogFormVisible = false
+      await afterSaleConfirm(this.dialogForm.order.number, { accept, review: this.dialogForm.review})
+      this.$message.success('保存成功')
     },
     ...{ dateTimeFormat, afterSaleStatus }
   },
