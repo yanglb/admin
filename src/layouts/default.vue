@@ -12,7 +12,7 @@
           <router-link to="/" class="nav-link">首页</router-link>
         </li>
         <li class="nav-item">
-          <span class="nav-link" href="#">yanglb.com - 管理平台</span>
+          <span class="nav-link" href="#">管理平台</span>
         </li>
       </ul>
       

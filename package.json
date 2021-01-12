@@ -1,7 +1,8 @@
 {
   "name": "admin",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "管理后台框架",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

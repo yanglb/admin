@@ -1,8 +1,8 @@
 <template>
   <aside class="main-sidebar elevation-4 sidebar-dark-purple">
     <a href="#" class="brand-link navbar-purple">
-      <img src="@/assets/logo.png" alt="yanglb.com" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">yanglb.com</span>
+      <img src="@/assets/logo.png" alt="管理平台" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">管理平台</span>
     </a>
 
     <div class="sidebar">

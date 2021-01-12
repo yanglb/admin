@@ -39,7 +39,7 @@ const router = new VueRouter({
 
 router.afterEach(to => {
   Vue.nextTick(() => {
-    document.title = to.meta.title + ' - yanglb.com'
+    document.title = to.meta.title + ' - 管理平台'
   });
 });
 
