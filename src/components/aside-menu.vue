@@ -1,8 +1,8 @@
 <template>
   <aside class="main-sidebar elevation-4 sidebar-dark-purple">
     <a href="#" class="brand-link navbar-purple">
-      <img src="@/assets/logo.png" alt="财税专家" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">财税专家</span>
+      <img src="@/assets/logo.png" alt="yanglb.com" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">yanglb.com</span>
     </a>
 
     <div class="sidebar">
@@ -74,7 +74,7 @@
           role="menu" 
         >
           <li class="nav-item">
-            <a href="http://112.17.126.252:8092/" class="nav-link" target="_blank">
+            <a href="https://yanglb.com" class="nav-link" target="_blank">
               <i class="nav-icon fas fa-heartbeat text-danger"></i>
               <p class="text">
                 大屏监控<i class="right fas fa-external-link-alt"></i>

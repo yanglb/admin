@@ -12,7 +12,7 @@
           <router-link to="/" class="nav-link">首页</router-link>
         </li>
         <li class="nav-item">
-          <span class="nav-link" href="#">财税专家管理平台</span>
+          <span class="nav-link" href="#">yanglb.com - 管理平台</span>
         </li>
       </ul>
       
@@ -60,7 +60,7 @@
     </div>
 
     <footer class="main-footer">
-      <strong>Copyright &copy; 2020 <a href="https://yanglb.com">财税专家</a>.</strong>
+      <strong>Copyright &copy; 2020 <a href="https://yanglb.com">yanglb.com</a>.</strong>
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> {{ version }}

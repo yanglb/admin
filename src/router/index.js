@@ -39,7 +39,7 @@ const router = new VueRouter({
 
 router.afterEach(to => {
   Vue.nextTick(() => {
-    document.title = to.meta.title + ' - 优税财税'
+    document.title = to.meta.title + ' - yanglb.com'
   });
 });
 
