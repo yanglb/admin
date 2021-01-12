@@ -4,6 +4,6 @@ export default {
   component: () => import('@/views/article/index'),
   meta: {
     title: '文章管理',
-    icon: 'nav-icon fas fa-tachometer-alt'
+    icon: 'nav-icon fas fa-newspaper'
   }
 }
